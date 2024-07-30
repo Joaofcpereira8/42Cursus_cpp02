@@ -36,11 +36,6 @@ Fixed &Fixed::operator=(const Fixed& o) {
 	return *this;
 }
 
-std::ostream& operator<<(std::ostream& os, const Fixed& obj) {
-	os << obj.toFloat();
-	return os;
-}
-
 int		Fixed::getRawBits(void) const{
 	std::cout << "getRawBits member function called" << std::endl;
 	return (fixedPoint);
@@ -60,4 +55,65 @@ float	Fixed::toFloat() const {
 
 Fixed::~Fixed() {
 	std::cout << "Destructor called" << std::endl;
+}
+
+bool	Fixed::operator>(const Fixed &o) {
+
+}
+
+bool	Fixed::operator>=(const Fixed &o) {
+
+}
+
+bool	Fixed::operator<(const Fixed &o) {
+
+}
+
+bool	Fixed::operator<=(const Fixed &o) {
+
+}
+
+bool	Fixed::operator==(const Fixed &o) {
+
+}
+
+bool	Fixed::operator!=(const Fixed &o) {
+
+}
+
+Fixed &Fixed::operator+(const Fixed &o) {
+
+}
+
+Fixed &Fixed::operator-(const Fixed &o) {
+
+}
+
+Fixed &Fixed::operator*(const Fixed &o) {
+
+}
+
+Fixed &Fixed::operator/(const Fixed &o) {
+
+}
+
+Fixed	static &Fixed::min(Fixed &Fixed 1, Fixed &Fixed2) {
+
+}
+
+Fixed	static &Fixed::max(Fixed &Fixed 1, Fixed &Fixed2) {
+
+}
+
+Fixed	static const &Fixed::min(const Fixed &Fixed 1, const Fixed &Fixed2) {
+
+}
+
+Fixed	static const &Fixed::max(const Fixed &Fixed 1, const Fixed &Fixed2) {
+
+}
+
+std::ostream& operator<<(std::ostream& os, const Fixed& obj) {
+	os << obj.toFloat();
+	return os;
 }
