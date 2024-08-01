@@ -82,39 +82,46 @@ bool	Fixed::operator!=(const Fixed &o) const {
 	return this->toFloat() != o.toFloat();
 }
 
-Fixed &Fixed::operator+(const Fixed &o) const {
+Fixed Fixed::operator+(const Fixed &o) const {
 	return this->toFloat() + o.toFloat();
 }
 
-Fixed &Fixed::operator-(const Fixed &o) const {
+Fixed Fixed::operator-(const Fixed &o) const {
 	return this->toFloat() - o.toFloat();
 }
 
-Fixed &Fixed::operator*(const Fixed &o) const {
+Fixed Fixed::operator*(const Fixed &o) const {
 	return this->toFloat() * o.toFloat();
 }
 
-Fixed &Fixed::operator/(const Fixed &o) const {
+Fixed Fixed::operator/(const Fixed &o) const {
 	return this->toFloat() / o.toFloat();
 }
 
+//Pre-increment
 Fixed &Fixed::operator++() {
-	this->fixedPoint++;
-	return *this;
+	this->fixedPoint++; //Incrementamos o valor
+	return *this; //Retornamos o objeto currente pela referencia
 }
 
-Fixed Fixed::operator++(int) {
-
-}
-
-
+//Pre-decrement
 Fixed &Fixed::operator--() {
 	this->fixedPoint--;
 	return *this;
 }
 
-Fixed Fixed::operator--(int) {
+//Pos-increment
+Fixed Fixed::operator++(int) {
+	Fixed temp = *this; //Criamos uma copia do objecto
+	this->fixedPoint++; //Incrementamos o objeto
+	return temp; //Returnamos a copia pelo valor
+}
 
+//Pos-decrement
+Fixed Fixed::operator--(int) {
+	Fixed temp = *this;
+	this->fixedPoint--;
+	return temp;
 }
 
 Fixed	&Fixed::min(Fixed &Fixed1, Fixed &Fixed2) {

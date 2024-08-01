@@ -41,10 +41,10 @@ class Fixed {
 		bool operator==(const Fixed& o) const;
 		bool operator!=(const Fixed& o) const;
 
-		Fixed& operator+(const Fixed& o) const;
-		Fixed& operator-(const Fixed& o) const;
-		Fixed& operator*(const Fixed& o) const;
-		Fixed& operator/(const Fixed& o) const;
+		Fixed operator+(const Fixed& o) const;
+		Fixed operator-(const Fixed& o) const;
+		Fixed operator*(const Fixed& o) const;
+		Fixed operator/(const Fixed& o) const;
 
 		Fixed& operator++();
 		Fixed operator++(int);
