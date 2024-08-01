@@ -34,27 +34,27 @@ class Fixed {
 		float	toFloat(void) const;
 		int		toInt(void) const;
 
-		bool operator>(const Fixed& o);
-		bool operator>=(const Fixed& o);
-		bool operator<(const Fixed& o);
-		bool operator<=(const Fixed& o);
-		bool operator==(const Fixed& o);
-		bool operator!=(const Fixed& o);
+		bool operator>(const Fixed& o) const;
+		bool operator>=(const Fixed& o) const;
+		bool operator<(const Fixed& o) const;
+		bool operator<=(const Fixed& o) const;
+		bool operator==(const Fixed& o) const;
+		bool operator!=(const Fixed& o) const;
 
-		Fixed& operator+(const Fixed& o);
-		Fixed& operator-(const Fixed& o);
-		Fixed& operator*(const Fixed& o);
-		Fixed& operator/(const Fixed& o);
+		Fixed& operator+(const Fixed& o) const;
+		Fixed& operator-(const Fixed& o) const;
+		Fixed& operator*(const Fixed& o) const;
+		Fixed& operator/(const Fixed& o) const;
 
 		Fixed& operator++();
 		Fixed operator++(int);
 		Fixed& operator--();
 		Fixed operator--(int);
 
-		static Fixed& min(Fixed &Fixed 1, Fixed &Fixed2);
-		static Fixed& max(Fixed &Fixed 1, Fixed &Fixed2);
-		static const Fixed& min(const Fixed &Fixed 1, const Fixed &Fixed2);
-		static const Fixed& max(const Fixed &Fixed 1, const Fixed &Fixed2);
+		static Fixed& min(Fixed &Fixed1, Fixed &Fixed2);
+		static Fixed& max(Fixed &Fixed1, Fixed &Fixed2);
+		static const Fixed& min(const Fixed &Fixed1, const Fixed &Fixed2);
+		static const Fixed& max(const Fixed &Fixed1, const Fixed &Fixed2);
 };
 
 std::ostream& operator<<(std::ostream& os, const Fixed& obj); //<< assignment overload
