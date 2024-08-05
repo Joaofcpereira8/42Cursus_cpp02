@@ -23,8 +23,8 @@ class Fixed {
 
 	public:
 		Fixed(); //Default constructor
-		Fixed(const int n_int); //Int Constructor
-		Fixed(const float n_float); //Constructor that takes a const float-point num
+		Fixed(const int n_int); //Constructor that takes an int
+		Fixed(const float n_float); //Constructor that takes a float
 		Fixed(const Fixed& c); //Copy constructor
 		Fixed& operator=(const Fixed& o); //Copy assignment overload
 		~Fixed(); //Destructor
